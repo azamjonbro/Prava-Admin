@@ -14,11 +14,11 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>img</th>
-            <th>Questions</th>
-            <th>Hide</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th>Rasm</th>
+            <th>Savollar</th>
+            <th>Amallar</th>
+            <!-- <th></th>
+            <th></th> -->
           </tr>
         </thead>
         <tbody>
@@ -34,15 +34,18 @@
                 : question?.questions?.[selectedLanguage]
               }}
             </td>
-            <td>
-              <Button89 @click="hideQuestion(question)" :question="question" title="Hide" />
+            <td class="">
+              <div class="btn_icons">
+                <Button89 class="hide" @click="hideQuestion(question)" :question="question" title="hide" />
+                <Button89 class="update" @click="hideModals(question)" title="update" />
+                <Button89  class="delete" @click="deleteQuestion(question._id)" title="deleted" />
+
+              </div>
+            </td>
+            <!-- <td>
             </td>
             <td>
-              <Button89 @click="hideModals(question)" title="Update" />
-            </td>
-            <td>
-              <Button89 @click="deleteQuestion(question._id)" title="Delete" />
-            </td>
+            </td> -->
           </tr>
         </tbody>
       </table>
@@ -182,7 +185,6 @@ export default {
 
 .title {
   font-size: 2rem;
-  margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
@@ -205,6 +207,7 @@ td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* border: 1px solid orange; */
 }
 
 th {
@@ -221,6 +224,7 @@ tr:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom:2rem;
 }
 
 select {
@@ -316,5 +320,25 @@ option {
     border-color: transparent;
   }
 }
+/* icons style */
+.btn_icons{
+    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  gap: 20px; 
 
+}
+.hide{
+  background-color:#246407;
+  border-radius: 10px;
+}
+.update{
+   background-color:#023017;
+  border-radius: 10px; 
+}
+.delete{
+   background-color:rgb(112, 6, 6);
+  border-radius: 10px; 
+}
 </style>

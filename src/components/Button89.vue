@@ -1,11 +1,15 @@
 <template>
   <div>
-    <button class="button-54" role="button">{{ title }}</button>
+    <button class="button" role="button"><Icons class="icon" :name="title"/> </button>
   </div>
 </template>
 
 <script>
+  import Icons from "./Template/Icons.vue"
 export default {
+  components:{
+    Icons
+  },
   name: "Button89",
   props: {
     title: {
@@ -17,7 +21,27 @@ export default {
 </script>
 
 <style scoped>
-/* CSS */
+
+.button{
+  background-color:transparent;
+  /* border: 1px solid red; */
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 50%; */
+  transform: scale(1);
+  color: red;
+}
+.button:hover{
+  transform: scale(1.1);
+}
+.icon{
+}
+/* CSS
 .button-54 {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -45,5 +69,5 @@ export default {
   .button-54 {
     padding: 0.25em 0.75em;
   }
-}
+} */
 </style>
