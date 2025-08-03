@@ -23,15 +23,15 @@
         </thead>
         <tbody>
           <tr v-for="(question, index) in paginatedQuestions" :key="question.id">
-            <td>{{ index + 1 + (currentPage - 1) * itemsPerPage }}</td>
+            <td>{{ question?.id }}</td> 
             <td>
-              <img :src="'https://prava.safonon.uz' + question?.imgUrl.slice(1)" alt="img" class="question_img" loading="lazy" />
+              <img :src="'https://prava.safonon.uz' + question?.imgUrl.slice(1)" alt="img" class="question_img" loading="lazy" width="100" height="100" />
             </td>
             <td>
               {{
-                question.questions?.[selectedLanguage].length > 60
-                ? question.questions?.[selectedLanguage].slice(0, 60) + "..."
-                : question.questions?.[selectedLanguage]
+                question?.questions?.[selectedLanguage].length > 60
+                ? question?.questions?.[selectedLanguage].slice(0, 60) + "..."
+                : question?.questions?.[selectedLanguage]
               }}
             </td>
             <td>
