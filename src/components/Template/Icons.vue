@@ -27,7 +27,13 @@ export default {
                 </svg>`,
                 closehide: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M14.53 9.47L9.47 14.53M14.53 9.47C13.88 8.82 12.99 8.42 12 8.42C10.02 8.42 8.42 10.02 8.42 12C8.42 12.99 8.82 13.88 9.47 14.53M14.53 9.47L22 2M9.47 14.53L2 22M17.82 5.77C16.07 4.45 14.07 3.73 12 3.73C8.47 3.73 5.18 5.81 2.89 9.41C1.99 10.82 1.99 13.19 2.89 14.6C3.68 15.84 4.6 16.91 5.6 17.77M8.42 19.53C9.56 20.01 10.77 20.27 12 20.27C15.53 20.27 18.82 18.19 21.11 14.59C22.01 13.18 22.01 10.81 21.11 9.4C20.78 8.88 20.42 8.39 20.05 7.93M15.51 12.7C15.25 14.11 14.1 15.26 12.69 15.52" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>`
+                </svg>`,
+                password:`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M6 10V8C6 4.69 7 2 12 2C17 2 18 4.69 18 8V10" stroke="gray" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 <path d="M12 18.5C13.3807 18.5 14.5 17.3807 14.5 16C14.5 14.6193 13.3807 13.5 12 13.5C10.6193 13.5 9.5 14.6193 9.5 16C9.5 17.3807 10.6193 18.5 12 18.5Z" stroke="gray" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                 <path d="M17 22H7C3 22 2 21 2 17V15C2 11 3 10 7 10H17C21 10 22 11 22 15V17C22 21 21 22 17 22Z" stroke="gray " stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
+
 
             },
         }

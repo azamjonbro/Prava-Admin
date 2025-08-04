@@ -69,7 +69,7 @@ export default {
           }
           setTimeout(()=>{
             this.$router.push("/dashboard")
-          },3000)
+          },2000)
         }
         else {
           console.log("nimadir hato");

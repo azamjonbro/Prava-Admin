@@ -297,7 +297,7 @@ option {
   overflow: hidden;
 }
 
-.loader::after {
+/* .loader::after {
   content: "Loading...";
   animation: typing 1.1s steps(9, end) forwards, blink 0.7s step-end infinite;
   display: inline-block;
@@ -319,7 +319,7 @@ option {
   50% {
     border-color: transparent;
   }
-}
+} */
 /* icons style */
 .btn_icons{
     display: flex;
@@ -340,5 +340,31 @@ option {
 .delete{
    background-color:rgb(112, 6, 6);
   border-radius: 10px; 
+}
+
+
+/* //////// */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side,#000 94%,transparent) right/calc(200% - 1em) 100%;
+  animation: l24 1.5s infinite alternate linear;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side,#fff 94%,#000);
+  -webkit-background-clip:text;
+          background-clip:text;
+}
+
+@keyframes l24{
+  100%{background-position: left}
 }
 </style>
