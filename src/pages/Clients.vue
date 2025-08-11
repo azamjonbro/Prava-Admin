@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(client, index) in clients" :key="client.id">
+          <tr v-for="(client, index) in clients"  :key="client.id">
             <td>{{ index + 1 }}</td>
             <td>{{ client.name }}</td>
             <td>{{ client.email }}</td>

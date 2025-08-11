@@ -13,14 +13,19 @@
 
                 <p class="questionAnswer">To‘g‘ri javob: {{ correctAnswer[selectedLanguage] }} </p>
             </div>
-            <div class="question_close" @click="removeModal"><span>X</span></div>
+            <div class="question_close" @click="removeModal"><Icons name="closehide"/> </div>
         </div>
     </div>
 </template>
 
 <script>
+import Icons from './Template/Icons.vue';
+
 export default {
   name: "OneProductModal",
+  components:{
+    Icons
+  },
   props: {
     question: {
       type: Object,
@@ -40,18 +45,16 @@ export default {
     correctAnswer() {
       const index = this.question.correct_answer - 1;
       return this.question.answers[index];
-      console.log(question);
-      
     }
   },
   methods: {
     removeModal() {
       this.$emit("close");
-      console.log(this.question);
+      // console.log(this.question);
     }
   },
   mounted() {
-    console.log(this.question);
+    // console.log(this.question);
 }
 }
 </script>
@@ -67,17 +70,17 @@ export default {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
-    /* border: 1px solid red; */
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
+  /* border: 1px solid red; */
     background-color: #2a2a2a;
     border-radius: 12px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
-    padding: 30px;
+    padding: 40px;
     max-width: 1000px;
     width: 100%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
