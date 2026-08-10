@@ -2,7 +2,7 @@
     <div class="oneProductModal" @click.self="removeModal">
         <div class="modal-content">
             <div class="modal-img">
-                <img :src="'https://prava.safonon.uz' + question.imgUrl" alt="img" class="question_img" />
+                <img :src="apiUrl + question.imgUrl" alt="img" class="question_img" />
             </div>
             <div class="modal-text">
                 <h2 class="question">Savol: {{ question.questions[selectedLanguage] }}</h2>
@@ -42,6 +42,9 @@ export default {
   }
   },
   computed: {
+    apiUrl() {
+      return import.meta.env.VITE_API_URL;
+    },
     correctAnswer() {
       const index = this.question.correct_answer - 1;
       return this.question.answers[index];

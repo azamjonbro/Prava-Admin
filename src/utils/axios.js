@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Asosiy instance yaratamiz
 const api = axios.create({
-  baseURL: "https://prava.safonon.uz", // Asosiy API manzilingiz
+  baseURL: import.meta.env.VITE_API_URL, // Asosiy API manzilingiz
   timeout: 5000, // 5 soniya timeout
   headers: {
     "Content-Type": "application/json",

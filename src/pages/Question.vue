@@ -25,7 +25,7 @@
           <tr v-for="(question, index) in paginatedQuestions" :key="question.id">
             <td>{{ question?.id }}</td> 
             <td>
-              <img :src="'https://prava.safonon.uz' + question?.imgUrl.slice(1)" alt="img" class="question_img" loading="lazy" width="100" height="100" />
+              <img :src="apiUrl + question?.imgUrl" alt="img" class="question_img" loading="lazy" width="100" height="100" />
             </td>
             <td>
               {{
@@ -98,6 +98,7 @@ export default {
       currentPage: 1,
       itemsPerPage: 50,
       loading:false,
+      apiUrl: import.meta.env.VITE_API_URL,
     };
   },
   computed: {
